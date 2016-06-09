@@ -1,9 +1,12 @@
 $(document).ready(function() {
 
-var calc = $("#wish").value * $("#tax").value / 100 + $("#wish").value;
-
-$("input").on("change", function() {
-  $("#result").value = calc.toFixed(2);
+$("#calculate").on("click", function() {
+  var calc = parseFloat($("#wish").val()) * parseFloat($("#tax").val()) / 100 + parseFloat($("#wish").val());
+  if (isNaN(calc)) {
+    $("#result").val("Insira um número.");
+  } else {
+    $("#result").val("R$ " + calc.toFixed(2));
+  };
 });
 
 });

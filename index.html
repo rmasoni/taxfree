@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<form id="magic">
+<form>
   <div class="field-wrap">
     <label>Quanto você quer ganhar</label>
     <br>
@@ -20,9 +20,12 @@
     <input id="tax" type="number" inputmode="numeric" min="0.1" value="17.5"> %
   </div>
   <div class="field-wrap">
-    <label>Quanto cobrar</label>
-    <br>
-    R$ <output for="wish tax" id="result">5875</output>
+    <button type="button" id="calculate">Quanto cobrar?</button>
+  </div>
+  <div class="field-wrap">
+    <p>
+      <output for="wish tax" id="result">R$ 5875.00</output>
+    </p>
   </div>
 </form>
 
