@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <title>Taxfree</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<form id="magic">
+  <div class="field-wrap">
+    <label>Quanto você quer ganhar</label>
+    <br>
+    <input id="wish" type="number" inputmode="numeric" min="1" value="5000">
+  </div>
+  <div class="field-wrap">
+    <label>Alíquota</label>
+    <br>
+    <input id="tax" type="number" inputmode="numeric" min="0.1" value="17.5"> %
+  </div>
+  <div class="field-wrap">
+    <label>Quanto cobrar</label>
+    <br>
+    R$ <output for="wish tax" id="result">5875</output>
+  </div>
+</form>
+
+</body>
+</html>
