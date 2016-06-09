@@ -8,14 +8,17 @@
 </head>
 <body>
 
+<h1>Taxfree</h1>
+<p>Saiba o quanto cobrar de seus clientes para receber o valor desejado após os impostos.</p>
+
 <form>
   <div class="field-wrap">
-    <label>Quanto você quer ganhar</label>
+    <label for="wish">Quanto você quer ganhar</label>
     <br>
-    <input id="wish" type="number" inputmode="numeric" min="1" value="5000">
+    R$ <input id="wish" type="number" inputmode="numeric" min="1" value="5000">
   </div>
   <div class="field-wrap">
-    <label>Alíquota</label>
+    <label for="tax">Alíquota</label>
     <br>
     <input id="tax" type="number" inputmode="numeric" min="0.1" value="17.5"> %
   </div>
