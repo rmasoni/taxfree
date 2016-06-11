@@ -1,12 +1,17 @@
 $(document).ready(function() {
 
 $("form").on("submit", function() {
-  var calc = parseFloat($("#wish").val()) * parseFloat($("#tax").val()) / 100 + parseFloat($("#wish").val());
-  if (isNaN(calc)) {
-    $("#result").val("Insira um número.");
+  var gross = parseFloat($("#wish").val()) * parseFloat($("#tax").val()) / 100 + parseFloat($("#wish").val());
+  var tax = parseFloat($("#wish").val()) * parseFloat($("#tax").val()) / 100;
+
+  if (isNaN(gross)) {
+    $("#gross-result").val("Insira um número.");
+    $("#tax-result").val("");
   } else {
-    $("#result").val("R$ " + calc.toFixed(2));
+    $("#gross-result").val("R$ " + gross.toFixed(2));
+    $("#tax-result").val("(R$ " + tax.toFixed(2) + " de impostos)");
   };
+
   return false;
 });
 
