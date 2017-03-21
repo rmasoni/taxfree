@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
 $("form").on("submit", function() {
-  var gross = parseFloat($("#wish").val()) * parseFloat($("#tax").val()) / 100 + parseFloat($("#wish").val());
   var tax = parseFloat($("#wish").val()) * parseFloat($("#tax").val()) / 100;
+  var gross = parseFloat($("#wish").val()) + tax;
 
   if (isNaN(gross)) {
     $("#gross-result").val("Insira um número.");
